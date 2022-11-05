@@ -1,11 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import "../App.css"
 
 const Home = () => {
-const [user, setUser] = useState([]);
-const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(
     () => {
@@ -19,13 +20,22 @@ const [loading, setLoading] = useState(false);
     }, []
   )
 
+  if (loading) {
+    return <h2>Loading</h2>
+  }
 
-  
-   return (
+  return (
     <section>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="This page is the home page containing introductory info" />
+        <link rel="canonical" href="/home" />
+      </Helmet>
+
+
       <h1 className="intro">Hello 👋,  I'm {user.name} </h1>
       <div className="intro-container">
-        <img src={user.avatar_url} />
+        <img src={user.avatar_url} alt="image of the user" loading="eager" title="Image of Adwoa Baah Addo-Brako" width="460" height="460" />
         <section className="intro-right">
           <div className="user-bio">{user.bio}</div>
           <div className="stats">
@@ -35,7 +45,7 @@ const [loading, setLoading] = useState(false);
           </div>
         </section>
       </div>
-     </section> 
+    </section>
   )
 }
 

@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom"
 import '../App.css';
 import Pagination from "./Pagination.jsx"
 import Project from "./Project.jsx"
-import NotFound from "./NotFound.jsx"
+import {Helmet} from "react-helmet-async"
 
 const Repos = () => {
   // setting states 
@@ -63,6 +63,12 @@ const Repos = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Repos</title>
+        <meta name="description" content="Here is a list of Repos for the user's github profile"/>
+        <link rel="canonical" href="/repos" />
+      </Helmet>
+      
       <h2>GitHub Repositories</h2>
       {/*renders an unordered list of repos*/}
       <ul>
