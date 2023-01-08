@@ -2,7 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { LinearProgress } from "@mui/material";
 import "../App.css"
+
 
 const Home = () => {
   const [user, setUser] = useState([]);
@@ -21,7 +23,10 @@ const Home = () => {
   )
 
   if (loading) {
-    return <h2>Loading</h2>
+    return <div>
+      <h2>Loading</h2>
+      <LinearProgress />
+    </div>
   }
 
   return (
@@ -33,10 +38,13 @@ const Home = () => {
       </Helmet>
 
 
-      <h1 className="intro">Hello 👋,  I'm {user.name} </h1>
       <div className="intro-container">
-        <img src={user.avatar_url} alt="image of the user" loading="eager" title="Image of Adwoa Baah Addo-Brako" width="460" height="460" />
-        <section className="intro-right">
+        <div className="box-A">
+
+          <img src={user.avatar_url} alt="image of the user" loading="eager" title="Image of Adwoa Baah Addo-Brako" width="460" height="460" />
+          <h1 className="intro">Hello 👋,  I'm {user.name} </h1>
+        </div>
+        <section className="box-B">
           <div className="user-bio">{user.bio}</div>
           <div className="stats">
             <div className="stat"><span className="bold">{user.public_repos}</span> repositories</div>

@@ -6,7 +6,7 @@
 }
 
 body{
-  background: #f7f7f7;
+  background: white;
   font-family: 'Source Sans Pro', sans-serif;
 }
 /* main {
@@ -18,14 +18,14 @@ body{
 .main-nav{
   overflow:hidden;
   padding: 15px;
-  background: black;
+  background: #f2efed;
   display: flex;
   gap: 50px;
   justify-content: center;
 }
 
 .nav-link{
-  color:white;
+  color:#998778;
   text-decoration: none;
   text-size: 30px;
   text-transform: uppercase;
@@ -38,8 +38,9 @@ body{
 }
 
 .intro{
-  margin: 50px;
+/*   margin-top: 50px; */
   text-align:center;
+  color:#998778;
 }
 
 .intro-container{
@@ -49,24 +50,39 @@ body{
 
 img{
   transform: scale(0.8);
-  border-radius: 50%;
-  margin-top:-30px;
+  
+/*   border-radius: 50%; */
+  margin-top:-100px;
 }
 
-.intro-right{
+.box-A{
+  width: 50%;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-B{
+  width: 50%;
+  max-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content:center;
-  background:white;
-   border-radius: 20px;
-  box-shadow: 6px 9px 9px -7px rgba(0,0,0,0.28);
+  background:#bea48c;
+/*    border-radius: 20px;
+  box-shadow: 6px 9px 9px -7px rgba(0,0,0,0.28); */
 }
 
 .user-bio{
   margin: 20px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
+  width: 100%;
+  padding: 25px;
+  color:white;
 }
 
 
@@ -80,10 +96,11 @@ img{
 .stat {
   margin: 10px;
   padding: 20px;
-  background: pink;
+  background: #8f662b;
   border-radius: 10px;
   text-align: center;
   width: 300px;
+  color:white
 }
 
 .bold{
@@ -94,6 +111,7 @@ h2{
   font-size: 24px;
   margin: 20px;
   text-align:center;
+  color: #998778;
 }
 
 ul{
@@ -107,7 +125,7 @@ ul{
   box-shadow: 6px 9px 9px -7px rgba(0,0,0,0.28);
   width: 400px;
   text-align: center;
-  background:white;
+  background:#b28450;
   
 }
 
@@ -120,15 +138,16 @@ ul{
   text-transform: capitalize;
   font-weight: 900;
   font-size: 16px;
+  color: floralwhite
 }
 
 .lang{
- color: black;
+ color: wheat;
   font-size: 16px;
 }
 
 .contributors{
-  color: black;
+  color: wheat;
   font-size: 12px;
 }
 
@@ -136,6 +155,7 @@ ul{
 .paginate-box{
   display: flex;
   justify-content: center;
+  align-items:center;
 }
 
 .list-box{
@@ -149,22 +169,36 @@ ul{
 }
 
 .err-container{
+      margin: 60px auto;
+  background:#b28450;
+  border-radius: 50%;
   display: flex;
   flex-direction:column;
   justify-content:center;
   align-items: center;
-  height: 400px;
+  height: 450px;
+  width:450px;
 }
 
 .err{
   text-align: center;
-  line-height: 3;
-  font-size: 30px;
+  line-height: 2;
+  font-size: 70px;
   font-weight: 900;
+  color:white;
+  margin-top: -80px;
 }
+
+  .err-title{
+    text-align: center;
+  font-size: 16px;
+  color: white;
+  }
+
 .err-body{
   text-align: center;
   font-size: 16px;
+  color: white;
 }
 
 .p-body{
@@ -173,6 +207,7 @@ ul{
 }
 
 .err-button{
+
   padding:20px;
   display: flex;
   direction: column;
@@ -182,7 +217,7 @@ ul{
 button{
   padding: 20px;
   border: none;
-  background: black;
+  background:#b28450;
   color: white;
   font-weight: 600;
   border-radius: 30px;
@@ -202,7 +237,7 @@ details{
   align-items: flex-start;
   padding: 20px;
   width: 400px;
-  background:white;
+  background:#f2efed;
   border-radius: 20px;
   box-shadow: 6px 9px 9px -7px rgba(0,0,0,0.28);
 }
@@ -212,6 +247,9 @@ details{
   margin: 20px;
   text-align: center;
   font-size: 16px;
+  text-decoration: none;
+  color: black;
+  margin-top: 80px;
 }
 
 .details{
@@ -231,4 +269,37 @@ details{
   .card{
   width: 200px;
 }
+
+.intro-container{
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro{
+    margin-top: -50px;
+    padding: 20px;
+    width: 300px;
+}
+  
+ img{
+   transform: scale(0.7);
+  border-radius: 50%;
+   margin-top: 0px;
+   
+ } 
+
+  .box-B{
+    width: 100%;
+    height: 400px;
+  }
+
+  .stats{
+    margin-top: -30px;
+    gap: 0px;
+  }
+
+  .stat{
+    width:200px;
+    padding:15px;
+  }
 }
