@@ -23,23 +23,23 @@ const Project = () => {
   const { projectId } = useParams();
   // console.log(repos)
   const project = repos.find(repo => repo.id == projectId);
-  const {name, html_url, forks, stargazers_count, updated_at} = project || {};
+  const { name, html_url, forks, stargazers_count, updated_at } = project || {};
 
   return (
     <>
       <Helmet>
         <title>Project</title>
-        <meta name="description" content="This page contains the data for a single repo clicked on"/>
+        <meta name="description" content="This page contains the data for a single repo clicked on" />
         <link rel="canonical" href="/repos/:projectId" />
       </Helmet>
-      
+
       <h2>{name}</h2>
       <section className="data-box">
-      <div className="details">Stars: <span className="deets">{stargazers_count}</span></div>
-      <div className="details">Forks: <span className="deets">{forks}</span></div>
-      <div className="details">Last Update: <span className="deets">{updated_at}</span></div>
-      <a  className="details" href={html_url} target="_blank">Visit Source Code</a>
-        </section>
+        <div className="details">Stars: <span className="deets">{stargazers_count}</span></div>
+        <div className="details">Forks: <span className="deets">{forks}</span></div>
+        <div className="details">Last Update: <span className="deets">{updated_at}</span></div>
+        <a className="details" href={html_url} target="_blank">Visit Source Code</a>
+      </section>
       <Link className="home" to="/repos">Back to Repos</Link>
     </>
   )

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { LinearProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import "../App.css"
 
 
@@ -24,8 +24,7 @@ const Home = () => {
 
   if (loading) {
     return <div>
-      <h2>Loading</h2>
-      <LinearProgress />
+      <CircularProgress size="150" />
     </div>
   }
 

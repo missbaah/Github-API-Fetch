@@ -6,7 +6,7 @@ import '../App.css';
 import Pagination from "./Pagination.jsx"
 import Project from "./Project.jsx"
 import { Helmet } from "react-helmet-async"
-import { LinearProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 
 const Repos = () => {
   // setting states 
@@ -61,7 +61,7 @@ const Repos = () => {
   if (loading) {
     return <div >
       <h2>Loading</h2>
-      <LinearProgress/>
+      <CircularProgress size="150" />
     </div>
 
   }
