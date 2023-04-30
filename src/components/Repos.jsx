@@ -6,7 +6,6 @@ import '../App.css';
 import Pagination from "./Pagination.jsx"
 import Project from "./Project.jsx"
 import { Helmet } from "react-helmet-async"
-import { CircularProgress } from "@mui/material";
 
 const Repos = () => {
   // setting states 
@@ -58,10 +57,11 @@ const Repos = () => {
 
   // Create paginate function
   const paginate = (num) => setCurrentPage(num);
+
+  // Loading 
   if (loading) {
     return <div >
       <h2>Loading</h2>
-      <CircularProgress size="150" />
     </div>
 
   }
